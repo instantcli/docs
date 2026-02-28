@@ -31,8 +31,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Get started",
-      "href": "https://instantcli.com"
+      "label": "Generate CLI",
+      "href": "https://instantcli.com/dashboard"
     }
   },
   "footer": {

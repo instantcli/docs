@@ -8,7 +8,7 @@ Your CLI stores configuration locally so you don't have to pass flags on every c
 ## Setting your API key
 
 ```bash
-your-cli config set api-key sk-your-key-here
+your-cli configure --api-key sk-your-key-here
 ```
 
 Once set, all commands will use this key automatically. You can still override it per-command with `--api-key`.
@@ -18,7 +18,14 @@ Once set, all commands will use this key automatically. You can still override i
 If you need to point your CLI at a different server (e.g., staging):
 
 ```bash
-your-cli config set base-url https://api.staging.example.com
+your-cli configure --base-url https://api.staging.example.com
+```
+
+## Viewing and clearing config
+
+```bash
+your-cli configure --show   # View current configuration
+your-cli configure --clear  # Reset all configuration
 ```
 
 ## Config file location
