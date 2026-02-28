@@ -1,0 +1,41 @@
+---
+title: "Auto-updates"
+description: "Keep your CLI current when the API changes"
+---
+
+Auto-updates are included with the monthly plan ($19/month). When your API docs change, InstantCLI regenerates your CLI and pushes an update automatically.
+
+## How it works
+
+Your CLI checks for updates in the background when you run a command. If a new version is available, it downloads and installs it automatically. This check is non-blocking — it won't slow down your commands.
+
+## Manual updates
+
+You can trigger an update manually at any time:
+
+```bash
+your-cli update
+```
+
+## Disabling update checks
+
+If you want to disable automatic update checks, set the `NO_UPDATE_CHECK` environment variable:
+
+```bash
+NO_UPDATE_CHECK=true your-cli users list
+```
+
+Or export it in your shell profile to disable permanently:
+
+```bash
+export NO_UPDATE_CHECK=true
+```
+
+## One-time purchase vs. monthly
+
+| | One-time ($19) | Monthly ($19/mo) |
+|---|---|---|
+| Initial CLI generation | Yes | Yes |
+| Source code | Yes | Yes |
+| Auto-updates | No | Yes |
+| Manual `update` command | No | Yes |

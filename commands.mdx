@@ -1,0 +1,64 @@
+---
+title: "Commands"
+description: "How to use your generated CLI's commands and flags"
+---
+
+Your generated CLI organizes commands around your API's resources and actions.
+
+## Command structure
+
+```bash
+your-cli <resource> <action> [flags]
+```
+
+For example, if your API has a `users` resource:
+
+```bash
+your-cli users list
+your-cli users get --id user_123
+your-cli users create --name "Jane" --email "jane@example.com"
+your-cli users delete --id user_123
+```
+
+## Global flags
+
+These flags are available on every command:
+
+| Flag | Description |
+|---|---|
+| `--api-key` | API key for authentication |
+| `--base-url` | Override the default API base URL |
+| `--output` | Output format: `table`, `json`, or `raw` |
+| `--json` | Shorthand for `--output json` |
+| `--raw` | Shorthand for `--output raw` |
+
+## Getting help
+
+Every command has built-in help:
+
+```bash
+# See all available resources
+your-cli --help
+
+# See actions for a specific resource
+your-cli users --help
+
+# See flags for a specific action
+your-cli users create --help
+```
+
+## Example workflow
+
+```bash
+# Set your API key once
+your-cli config set api-key sk-your-key-here
+
+# List resources
+your-cli users list
+
+# Get a specific resource as JSON
+your-cli users get --id user_123 --json
+
+# Create a new resource
+your-cli users create --name "Jane" --email "jane@example.com"
+```

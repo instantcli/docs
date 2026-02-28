@@ -1,0 +1,38 @@
+---
+title: "Installation"
+description: "Install your generated CLI on macOS, Linux, or Windows"
+---
+
+After your CLI is generated, you'll get a one-line install command. You can always find it in your [InstantCLI dashboard](https://instantcli.com).
+
+## macOS and Linux
+
+```bash
+curl -fsSL get.instantcli.com/your-slug/install.sh | sh
+```
+
+This downloads the correct binary for your platform and architecture, and adds it to your `PATH`.
+
+## Windows
+
+```powershell
+irm get.instantcli.com/your-slug/install.ps1 | iex
+```
+
+## Verify the installation
+
+After installing, verify everything is working:
+
+```bash
+your-cli --version
+```
+
+## Updating
+
+If you're on the monthly plan, your CLI updates automatically. You can also update manually at any time:
+
+```bash
+your-cli update
+```
+
+See [Auto-updates](/auto-updates) for more details.

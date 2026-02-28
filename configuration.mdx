@@ -1,0 +1,45 @@
+---
+title: "Configuration"
+description: "Configure API keys, base URLs, and other settings"
+---
+
+Your CLI stores configuration locally so you don't have to pass flags on every command.
+
+## Setting your API key
+
+```bash
+your-cli config set api-key sk-your-key-here
+```
+
+Once set, all commands will use this key automatically. You can still override it per-command with `--api-key`.
+
+## Setting the base URL
+
+If you need to point your CLI at a different server (e.g., staging):
+
+```bash
+your-cli config set base-url https://api.staging.example.com
+```
+
+## Config file location
+
+Configuration is stored as JSON at:
+
+```
+~/.config/your-cli/config.json
+```
+
+You can edit this file directly if you prefer.
+
+## Environment variables
+
+You can also configure your CLI with environment variables. These take precedence over the config file but are overridden by flags.
+
+| Variable | Description |
+|---|---|
+| `YOUR_CLI_API_KEY` | API key for authentication |
+| `YOUR_CLI_BASE_URL` | Override the default API base URL |
+
+<Note>
+The exact environment variable names depend on your CLI's name. Check `your-cli --help` for the specific variable names.
+</Note>
